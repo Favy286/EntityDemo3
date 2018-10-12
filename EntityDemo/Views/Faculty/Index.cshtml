@@ -1,0 +1,24 @@
+﻿@model IEnumerable<EntityDemo.Models.Faculty>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Faculties</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.ID</td>
+            <td>@s.facultyName</td>
+            <td>@s.email</td>
+        </tr>
+    }
+</table>
+
